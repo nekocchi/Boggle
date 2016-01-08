@@ -7,6 +7,7 @@ package controller;
 
 import java.io.*;
 import java.util.ArrayList;
+import model.Word;
 
 /**
  *
@@ -28,15 +29,15 @@ public class ReadFile {
         }
     }
     
-    public ArrayList<String> getDictionary()
+    public ArrayList<Word> getDictionary()
     {
-        ArrayList<String> dictionary = new ArrayList<>();
+        ArrayList<Word> dictionary = new ArrayList<>();
         
         try
         {
             while(in.ready())
             {
-                dictionary.add(in.readLine());
+                dictionary.add(new Word(in.readLine()));
             }
         }
         

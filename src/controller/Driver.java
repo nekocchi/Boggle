@@ -18,7 +18,8 @@ public class Driver
         Board b = new Board(4,4);
         ReadFile rf = new ReadFile();
         Dictionary d = new Dictionary(rf.getDictionary());
+        d.searchWord(new Word("abalones"));
         
-        b.printBoard();
+//        b.printBoard();
     }
 }
