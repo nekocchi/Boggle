@@ -5,7 +5,6 @@
  */
 package controller;
 
-import model.*;
 
 /**
  *
@@ -15,11 +14,6 @@ public class Driver
 {
     public static void main(String[] args)
     {
-        Board b = new Board(4,4);
-        ReadFile rf = new ReadFile();
-        Dictionary d = new Dictionary(rf.getDictionary());
-        d.searchWord(new Word("abalones"));
-        
-//        b.printBoard();
+        Main main = new Main();
     }
 }
