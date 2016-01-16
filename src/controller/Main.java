@@ -29,7 +29,7 @@ public class Main {
         this.population = new ArrayList<>();
         
         //Genetic Algorithm
-        d.searchWord(new Word("abalones"));
+//        d.searchWord(new Word("abalones"));
     }
     
     public void GeneticAlgo()
@@ -89,7 +89,7 @@ public class Main {
         State st;
         
         //create new object of state to generate fitness
-        st = new State(state);
+        st = new State(state, null);
         
         for(int c = 0; c < population.size(); c++)
         {
@@ -116,5 +116,22 @@ public class Main {
         return uninserted;
     }
     
+    
+    public int getRow(){
+        return this.row;
+    }
+    
+    public int getColumn(){
+        return this.column;
+    }
+    
+    public Dictionary getDictionary(){
+        return this.d;
+    }
+    
+    public void test(){
+        population.add(new State(null, new Word("abalones")));
+        population.get(0).print();
+    }
     
 }

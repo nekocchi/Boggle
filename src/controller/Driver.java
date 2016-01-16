@@ -11,9 +11,12 @@ package controller;
  * @author EdwardLeonardi
  */
 public class Driver
-{
+{   
+    public static Main main;
+    
     public static void main(String[] args)
     {
-        Main main = new Main();
+        Driver.main = new Main();
+        Driver.main.test();
     }
 }
