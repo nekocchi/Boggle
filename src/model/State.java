@@ -17,9 +17,9 @@ public class State {
     private Word word;
     private double f;
 
-    public State(int[] state, Word word) {
+    public State(int[] state) {
         this.state = state;
-        this.word = word;
+//        this.word = word;
         setF(computeF());
     }
 
@@ -79,4 +79,24 @@ public class State {
         System.out.println("WORD : "+ word.getActual());
         System.out.println("Fitness : "+ f);
     }
+    
+    @Override
+    public String toString(){
+        String selected = "Selected [1] : ";
+        String unselected = "Unselected [0] : ";
+        
+        for(int i = 0; i<state.length; i++){
+            if(state[i] == 1)
+                selected = selected + (i+1) + " ";
+            else
+                unselected = unselected + (i+1) + " ";
+        }
+        
+        String string = selected + "\n" + unselected;
+        
+        string = "["+getF()+"]"+ "\n" + string;
+        
+        return string;
+    }
+    
 }

@@ -89,7 +89,7 @@ public class Main {
         State st;
         
         //create new object of state to generate fitness
-        st = new State(state, null);
+        st = new State(state);
         
         for(int c = 0; c < population.size(); c++)
         {
@@ -130,8 +130,8 @@ public class Main {
     }
     
     public void test(){
-        population.add(new State(null, new Word("abalones")));
-        population.get(0).print();
+//        population.add(new State(null, new Word("abalones")));
+//        population.get(0).print();
     }
     
 }
