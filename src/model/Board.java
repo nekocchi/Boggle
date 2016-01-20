@@ -59,4 +59,18 @@ public class Board {
             System.out.println();
         }
     }
+
+    public String getBoard() {
+        String boardString = "";
+        
+        for(int a = 0; a < board.length; a++)
+        {
+            for(int b = 0; b < board[0].length; b++)
+            {
+                boardString = boardString + board[a][b];
+            }
+        }
+        
+        return boardString;
+    }
 }

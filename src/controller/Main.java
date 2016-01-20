@@ -13,7 +13,7 @@ import model.*;
  * @author EdwardLeonardi
  */
 public class Main {
-    private Board b;
+    public static Board b;
     private ReadFile rf;
     private Dictionary d;
     private ArrayList<State> population;
@@ -27,7 +27,9 @@ public class Main {
         this.rf = new ReadFile();
         this.d = new Dictionary(this.rf.getDictionary());
         this.population = new ArrayList<>();
-        
+//        generatePopulation();
+//        this.b.getBoard();
+//        this.b.printBoard();
         //Genetic Algorithm
 //        d.searchWord(new Word("abalones"));
     }
@@ -37,7 +39,7 @@ public class Main {
         
     }
     
-    public void GeneratePopulation()
+    public void generatePopulation()
     {
         int uninserted = 0;
         boolean temp;

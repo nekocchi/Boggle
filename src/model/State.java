@@ -6,6 +6,8 @@
 package model;
 
 import controller.Driver;
+import controller.Main;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -16,11 +18,30 @@ public class State {
     private int[] state;
     private Word word;
     private double f;
+    private String foundWord;
 
     public State(int[] state) {
         this.state = state;
 //        this.word = word;
+        stateToWord();
+        System.out.println(word.getActual());
         setF(computeF());
+    }
+    
+    private void stateToWord()
+    {
+        String board = Main.b.getBoard();
+        String tempWord = "";
+        
+        for(int bom = 0; bom < state.length; bom++)
+        {
+            if(state[bom] == 1)
+            {
+                tempWord = tempWord + board.charAt(bom);
+            }
+        }
+        
+        word = new Word(tempWord);
     }
 
     public int[] getState() {
@@ -54,29 +75,18 @@ public class State {
      * Length of the char should be close enough to 16 (max length) and stated in the dictionary list
      */
     private double computeF() {
+        double fitness = 0;
+        ArrayList<String> comlist;
+        Combinations com = new Combinations(word.getSorted());
+        comlist = com.getComstring();
         
-        double result = 0;
-        int isValid = 0;
-        
-        double maxLength = Driver.main.getRow() * Driver.main.getColumn();
-        
-        isValid = Driver.main.getDictionary().searchWord(word);
-        if(isValid == -1){
-            isValid = 0;
-        }
-        else{
-            isValid = 1;
-        }
-        
-        result = isValid * (maxLength - word.getActual().length());
-        
-        return result;
+        return fitness;
     }
 
     public void print(){
         System.out.println("---------------------------");
         System.out.println("FITNESS TEST");
-        System.out.println("WORD : "+ word.getActual());
+        System.out.println("WORD : "+ word);
         System.out.println("Fitness : "+ f);
     }
     
@@ -98,5 +108,4 @@ public class State {
         
         return string;
     }
-    
 }
