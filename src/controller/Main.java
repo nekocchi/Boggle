@@ -141,6 +141,8 @@ public class Main {
     }
     
     public void test(){
+        
+        b.printBoard();
 //        population.add(new State(null, new Word("abalones")));
 //        population.get(0).print();
     }

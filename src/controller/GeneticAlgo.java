@@ -141,7 +141,7 @@ public class GeneticAlgo {
             }
             g++;
 
-            if (curList.get(0).getF() == 0 || g >= 1000) {
+            if (curList.get(0).getF() <= 6 || g >= 1000) {
                 System.out.println("Total Search : " + g);
                 System.out.println(curList.get(0).toString());
                 break;
@@ -152,7 +152,14 @@ public class GeneticAlgo {
     
     //--TEST--//
     public void test() {
+        int[] arr = {1,1,1,1,0,0,0,0,1,1,1,1,0,0,0,0};
         
+        State x = new State(arr);
+        
+        x.print();
+    }
+    public void test2(){
+        runRandom();
     }
 
 }

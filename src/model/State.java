@@ -95,7 +95,8 @@ public class State {
             }
         }
         
-        fitness = longest.length();
+        fitness = 16 - longest.length();
+        this.foundWord = longest;
         
         return fitness;
     }
@@ -103,7 +104,7 @@ public class State {
     public void print(){
         System.out.println("---------------------------");
         System.out.println("FITNESS TEST");
-        System.out.println("WORD : "+ word);
+        System.out.println("WORD : "+ foundWord);
         System.out.println("Fitness : "+ f);
     }
     
@@ -121,7 +122,7 @@ public class State {
         
         String string = selected + "\n" + unselected;
         
-        string = "["+getF()+"]"+ "\n" + string;
+        string = "["+getF()+"]"+ "\n" + foundWord + "\n" + string;
         
         return string;
     }
