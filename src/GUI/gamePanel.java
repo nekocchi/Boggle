@@ -6,8 +6,11 @@
 package GUI;
 
 import controller.Main;
+import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -27,14 +30,22 @@ public class gamePanel extends javax.swing.JPanel {
         
         initComponents();
         
-        //setBoard();
+        setBoard();
         
         cdown = new Timer();
         cdown.scheduleAtFixedRate(new TimerTask(){
             
             public void run()
             {
-                timeLimit.setText("00:" + Integer.toString(setInterval()));
+                if(setInterval() > 9)
+                {
+                    timeLimit.setText("00:" + Integer.toString(setInterval()));
+                }
+                
+                else
+                {
+                    timeLimit.setText("00:0" + Integer.toString(setInterval()));
+                }
             }
         }, delay, period);
     }
@@ -45,27 +56,33 @@ public class gamePanel extends javax.swing.JPanel {
         return --interval;
     }
     
-//    private void setBoard()
-//    {
-//        String board = Main.b.getBoard();
-//        
-//        letter1.setText(Character.toString(board.charAt(0)));
-//        letter2.setText(Character.toString(board.charAt(1)));
-//        letter3.setText(Character.toString(board.charAt(2)));
-//        letter4.setText(Character.toString(board.charAt(3)));
-//        letter5.setText(Character.toString(board.charAt(4)));
-//        letter6.setText(Character.toString(board.charAt(5)));
-//        letter7.setText(Character.toString(board.charAt(6)));
-//        letter8.setText(Character.toString(board.charAt(7)));
-//        letter9.setText(Character.toString(board.charAt(8)));
-//        letter10.setText(Character.toString(board.charAt(9)));
-//        letter11.setText(Character.toString(board.charAt(10)));
-//        letter12.setText(Character.toString(board.charAt(11)));
-//        letter13.setText(Character.toString(board.charAt(12)));
-//        letter14.setText(Character.toString(board.charAt(13)));
-//        letter15.setText(Character.toString(board.charAt(14)));
-//        letter16.setText(Character.toString(board.charAt(15)));
-//    }
+    private void setBoard()
+    {
+        String board = Main.b.getBoard();
+        
+        letter1.setText(Character.toString(board.charAt(0)));
+        letter2.setText(Character.toString(board.charAt(1)));
+        letter3.setText(Character.toString(board.charAt(2)));
+        letter4.setText(Character.toString(board.charAt(3)));
+        letter5.setText(Character.toString(board.charAt(4)));
+        letter6.setText(Character.toString(board.charAt(5)));
+        letter7.setText(Character.toString(board.charAt(6)));
+        letter8.setText(Character.toString(board.charAt(7)));
+        letter9.setText(Character.toString(board.charAt(8)));
+        letter10.setText(Character.toString(board.charAt(9)));
+        letter11.setText(Character.toString(board.charAt(10)));
+        letter12.setText(Character.toString(board.charAt(11)));
+        letter13.setText(Character.toString(board.charAt(12)));
+        letter14.setText(Character.toString(board.charAt(13)));
+        letter15.setText(Character.toString(board.charAt(14)));
+        letter16.setText(Character.toString(board.charAt(15)));
+        
+        try {
+            MyFrame.drawContent(new gamePanel());
+        } catch (IOException ex) {
+            Logger.getLogger(MenuPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
