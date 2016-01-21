@@ -17,12 +17,11 @@ public class Driver
     
     public static void main(String[] args)
     {
-        Driver.main = new Main();
-        Driver.main.test();
+        main = new Main();
+        main.test();
         
-        Driver.ga = new GeneticAlgo(16);
+        ga = new GeneticAlgo(16);
         GeneticAlgo.setParameter(100, 10, 2);
         ga.test2();
-        
     }
 }
