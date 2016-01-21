@@ -34,7 +34,7 @@ public class MenuPanel extends javax.swing.JPanel {
         title = new javax.swing.JLabel();
         subTitle = new javax.swing.JLabel();
         startButton = new javax.swing.JButton();
-        tutorialButton = new javax.swing.JButton();
+        exitButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(206, 255, 254));
         setForeground(new java.awt.Color(255, 255, 255));
@@ -85,27 +85,27 @@ public class MenuPanel extends javax.swing.JPanel {
         });
         add(startButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 550, -1, -1));
 
-        tutorialButton.setBackground(new java.awt.Color(70, 118, 139));
-        tutorialButton.setFont(new java.awt.Font("Oswald", 1, 36)); // NOI18N
-        tutorialButton.setForeground(new java.awt.Color(206, 255, 254));
-        tutorialButton.setText("Tutorial");
-        tutorialButton.setToolTipText("");
-        tutorialButton.setAlignmentX(0.5F);
-        tutorialButton.setBorder(null);
-        tutorialButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        tutorialButton.setFocusPainted(false);
-        tutorialButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        tutorialButton.setMargin(new java.awt.Insets(2, 14, 15, 14));
-        tutorialButton.setMaximumSize(new java.awt.Dimension(150, 50));
-        tutorialButton.setMinimumSize(new java.awt.Dimension(150, 50));
-        tutorialButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        tutorialButton.setRolloverEnabled(false);
-        tutorialButton.addActionListener(new java.awt.event.ActionListener() {
+        exitButton.setBackground(new java.awt.Color(70, 118, 139));
+        exitButton.setFont(new java.awt.Font("Oswald", 1, 36)); // NOI18N
+        exitButton.setForeground(new java.awt.Color(206, 255, 254));
+        exitButton.setText("Exit");
+        exitButton.setToolTipText("");
+        exitButton.setAlignmentX(0.5F);
+        exitButton.setBorder(null);
+        exitButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exitButton.setFocusPainted(false);
+        exitButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        exitButton.setMargin(new java.awt.Insets(2, 14, 15, 14));
+        exitButton.setMaximumSize(new java.awt.Dimension(150, 50));
+        exitButton.setMinimumSize(new java.awt.Dimension(150, 50));
+        exitButton.setPreferredSize(new java.awt.Dimension(150, 50));
+        exitButton.setRolloverEnabled(false);
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tutorialButtonActionPerformed(evt);
+                exitButtonActionPerformed(evt);
             }
         });
-        add(tutorialButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 630, -1, -1));
+        add(exitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 630, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
@@ -116,15 +116,16 @@ public class MenuPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_startButtonActionPerformed
 
-    private void tutorialButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tutorialButtonActionPerformed
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tutorialButtonActionPerformed
+        Roogle.bye();
+    }//GEN-LAST:event_exitButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton exitButton;
     private javax.swing.JButton startButton;
     private javax.swing.JLabel subTitle;
     private javax.swing.JLabel title;
-    private javax.swing.JButton tutorialButton;
     // End of variables declaration//GEN-END:variables
 }

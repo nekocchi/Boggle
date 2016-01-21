@@ -69,11 +69,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="8b" green="76" red="46" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="0000"/>
+        <Property name="text" type="java.lang.String" value="0"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="80" width="-1" height="-1"/>
+          <AbsoluteConstraints x="90" y="80" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -569,7 +569,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="8b" green="76" red="46" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="aiAnswer"/>
+        <Property name="text" type="java.lang.String" value="AI&apos;s Answer"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[178, 50]"/>
         </Property>

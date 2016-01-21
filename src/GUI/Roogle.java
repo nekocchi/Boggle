@@ -11,6 +11,7 @@ import controller.Main;
 public class Roogle {
     public static Main main;
     public static GeneticAlgo ga;
+    public static MyFrame frame;
     
     public static void main(String[] args) throws Exception {
         main = new Main();
@@ -18,7 +19,7 @@ public class Roogle {
         GeneticAlgo.setParameter(100, 10, 2);
         ga.test2();
         
-        MyFrame frame = new MyFrame();  
+        frame = new MyFrame();  
         
         frame.setTitle("ROOGLE");
         
@@ -30,7 +31,12 @@ public class Roogle {
     {
         main = new Main();
         ga = new GeneticAlgo(16);
-        GeneticAlgo.setParameter(100, 10, 2);
+        GeneticAlgo.setParameter(100, 10, 10);
         ga.test2();
+    }
+    
+    public static void bye()
+    {
+        frame.dispose();
     }
 }

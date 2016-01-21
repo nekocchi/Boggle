@@ -9,14 +9,12 @@ import controller.Main;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import model.Word;
 
@@ -100,6 +98,11 @@ public class gamePanel_2 extends javax.swing.JPanel {
         letters[13] = letter14;
         letters[14] = letter15;
         letters[15] = letter16;
+        
+        for(int i = 0; i < letters.length; i++)
+        {
+            letters[i].setFont(new java.awt.Font("Oswald", 0, 54));
+        }
     }
     
     private static final int setInterval() {
@@ -158,7 +161,7 @@ public class gamePanel_2 extends javax.swing.JPanel {
         submitButton = new javax.swing.JButton();
         answerIcon = new javax.swing.JLabel();
         refreshIcon = new javax.swing.JLabel();
-        nextButton = new javax.swing.JButton();
+//        nextButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(206, 255, 254));
         setMaximumSize(new java.awt.Dimension(900, 900));
@@ -177,8 +180,8 @@ public class gamePanel_2 extends javax.swing.JPanel {
 
         scoreLabel.setFont(new java.awt.Font("Proxima Nova Rg", 1, 36)); // NOI18N
         scoreLabel.setForeground(new java.awt.Color(70, 118, 139));
-        scoreLabel.setText("0000");
-        add(scoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+        scoreLabel.setText("0");
+        add(scoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
 
         scoreTitle.setFont(new java.awt.Font("Oswald Regular", 1, 30)); // NOI18N
         scoreTitle.setText("SCORE");
@@ -391,7 +394,7 @@ public class gamePanel_2 extends javax.swing.JPanel {
         aiAnswer.setBackground(new java.awt.Color(255, 255, 255));
         aiAnswer.setFont(new java.awt.Font("Proxima Nova Rg", 1, 40)); // NOI18N
         aiAnswer.setForeground(new java.awt.Color(70, 118, 139));
-        aiAnswer.setText("aiAnswer");
+        aiAnswer.setText("AI's Answer");
         aiAnswer.setMaximumSize(new java.awt.Dimension(360, 50));
         aiAnswer.setMinimumSize(new java.awt.Dimension(360, 50));
         aiAnswer.setPreferredSize(new java.awt.Dimension(360, 50));
@@ -431,27 +434,27 @@ public class gamePanel_2 extends javax.swing.JPanel {
         });
         add(refreshIcon, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 740, -1, -1));
 
-        nextButton.setBackground(new java.awt.Color(70, 118, 139));
-        nextButton.setFont(new java.awt.Font("Oswald", 1, 36)); // NOI18N
-        nextButton.setForeground(new java.awt.Color(206, 255, 254));
-        nextButton.setText("Next");
-        nextButton.setToolTipText("");
-        nextButton.setAlignmentX(0.5F);
-        nextButton.setBorder(null);
-        nextButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        nextButton.setFocusPainted(false);
-        nextButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        nextButton.setMargin(new java.awt.Insets(2, 14, 15, 14));
-        nextButton.setMaximumSize(new java.awt.Dimension(150, 50));
-        nextButton.setMinimumSize(new java.awt.Dimension(150, 50));
-        nextButton.setPreferredSize(new java.awt.Dimension(150, 50));
-        nextButton.setRolloverEnabled(false);
-        nextButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nextButtonActionPerformed(evt);
-            }
-        });
-        add(nextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 810, -1, -1));
+//        nextButton.setBackground(new java.awt.Color(70, 118, 139));
+//        nextButton.setFont(new java.awt.Font("Oswald", 1, 36)); // NOI18N
+//        nextButton.setForeground(new java.awt.Color(206, 255, 254));
+//        nextButton.setText("Next");
+//        nextButton.setToolTipText("");
+//        nextButton.setAlignmentX(0.5F);
+//        nextButton.setBorder(null);
+//        nextButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//        nextButton.setFocusPainted(false);
+//        nextButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+//        nextButton.setMargin(new java.awt.Insets(2, 14, 15, 14));
+//        nextButton.setMaximumSize(new java.awt.Dimension(150, 50));
+//        nextButton.setMinimumSize(new java.awt.Dimension(150, 50));
+//        nextButton.setPreferredSize(new java.awt.Dimension(150, 50));
+//        nextButton.setRolloverEnabled(false);
+//        nextButton.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                nextButtonActionPerformed(evt);
+//            }
+//        });
+//        add(nextButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 810, -1, -1));
         
     }// </editor-fold>                        
 
@@ -590,7 +593,7 @@ public class gamePanel_2 extends javax.swing.JPanel {
     private javax.swing.JButton letter7;
     private javax.swing.JButton letter8;
     private javax.swing.JButton letter9;
-    private javax.swing.JButton nextButton;
+//    private javax.swing.JButton nextButton;
     private javax.swing.JLabel refreshIcon;
     private javax.swing.JLabel scoreLabel;
     private javax.swing.JLabel scoreTitle;
@@ -598,7 +601,5 @@ public class gamePanel_2 extends javax.swing.JPanel {
     private javax.swing.JLabel timeLimit;
     private javax.swing.JLabel timeTitle;
     private javax.swing.JLabel userAnswer;
-    private JLabel wrongIcon;
-    private JLabel rightIcon;
     // End of variables declaration                   
 }

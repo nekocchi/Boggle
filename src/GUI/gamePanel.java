@@ -138,8 +138,8 @@ public class gamePanel extends javax.swing.JPanel {
 
         scoreLabel.setFont(new java.awt.Font("Proxima Nova Rg", 1, 36)); // NOI18N
         scoreLabel.setForeground(new java.awt.Color(70, 118, 139));
-        scoreLabel.setText("0000");
-        add(scoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+        scoreLabel.setText("0");
+        add(scoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 80, -1, -1));
 
         scoreTitle.setFont(new java.awt.Font("Oswald Regular", 1, 30)); // NOI18N
         scoreTitle.setText("SCORE");
@@ -357,7 +357,7 @@ public class gamePanel extends javax.swing.JPanel {
         aiAnswer.setBackground(new java.awt.Color(255, 255, 255));
         aiAnswer.setFont(new java.awt.Font("Proxima Nova Rg", 1, 40)); // NOI18N
         aiAnswer.setForeground(new java.awt.Color(70, 118, 139));
-        aiAnswer.setText("aiAnswer");
+        aiAnswer.setText("AI's Answer");
         aiAnswer.setMaximumSize(new java.awt.Dimension(178, 50));
         aiAnswer.setMinimumSize(new java.awt.Dimension(178, 50));
         aiAnswer.setPreferredSize(new java.awt.Dimension(178, 50));

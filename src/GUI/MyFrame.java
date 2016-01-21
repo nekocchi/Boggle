@@ -40,5 +40,4 @@ public final class MyFrame extends JFrame{
         contentPane.add(menuPanel, BorderLayout.CENTER);
         contentPane.revalidate();
     }
-    
 }
