@@ -25,7 +25,6 @@ import java.util.ArrayList;
     private void combine(int start ){
         for( int i = start; i < inputstring.length(); ++i ){
             output.append( inputstring.charAt(i) );
-            System.out.println( output );
             comstring.add(output.toString());
             if ( i < inputstring.length() )
             combine( i + 1);

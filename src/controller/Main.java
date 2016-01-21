@@ -15,7 +15,7 @@ import model.*;
 public class Main {
     public static Board b;
     private ReadFile rf;
-    private Dictionary d;
+    public static Dictionary d;
     private ArrayList<State> population;
     private final int row, column, popSize;
     
@@ -27,6 +27,7 @@ public class Main {
         this.rf = new ReadFile();
         this.d = new Dictionary(this.rf.getDictionary());
         this.population = new ArrayList<>();
+        
 //        generatePopulation();
 //        this.b.getBoard();
 //        this.b.printBoard();
@@ -39,85 +40,93 @@ public class Main {
         
     }
     
-    public void generatePopulation()
-    {
-        int uninserted = 0;
-        boolean temp;
-        int[] state = new int[this.row * this.column];
-        
-        for(int a = 0; a < this.popSize; a++)
-        {
-            for(int b = 0; b < (this.row * this.column); b++)
-            {
-                int rand = (int) Math.round(Math.random());
-                
-                state[b] = rand;
-            }
-            
-            temp = addPopulation(state);
-            
-            //count the number of existing states in the population
-            if(temp)
-            {
-                uninserted++;
-            }
-        }
-        
-        while(uninserted != 0)
-        {
-            for(int c = 0; c < uninserted; c++)
-            {
-                for(int b = 0; b < (this.row * this.column); b++)
-                {
-                    int rand = (int) Math.round(Math.random());
-
-                    state[b] = rand;
-                }
-                
-                temp = addPopulation(state);
-                
-                //if it is successfully added
-                if(!temp)
-                {
-                    uninserted--;
-                }
-            }
-        }
-    }
+//    public void generatePopulation()
+//    {
+//        int uninserted = 0, tempinst;
+//        boolean temp;
+//        int[] state = new int[this.row * this.column];
+//        
+//        for(int a = 0; a < this.popSize; a++)
+//        {
+//            for(int b = 0; b < (this.row * this.column); b++)
+//            {
+//                int rand = (int) Math.round(Math.random());
+//                
+//                state[b] = rand;
+//            }
+//            
+//            temp = addPopulation(state);
+//            
+//            //count the number of existing states in the population
+//            if(temp)
+//            {
+//                uninserted++;
+//            }
+//        }
+//        
+//        tempinst = uninserted;
+//        
+//        while(uninserted != 0)
+//        {
+//            for(int c = 0; c < tempinst; c++)
+//            {
+//                for(int b = 0; b < (this.row * this.column); b++)
+//                {
+//                    int rand = (int) Math.round(Math.random());
+//
+//                    state[b] = rand;
+//                }
+//                System.out.println(c + " " + tempinst);
+//                temp = addPopulation(state);
+//                
+//                //if it is successfully added
+//                if(!temp)
+//                {
+//                    System.out.println("a");
+//                    uninserted--;
+//                }
+//            }
+//        }
+//        System.out.println("a");
+//    }
     
-    private boolean addPopulation(int[] state)
-    {
-        boolean inserted = false, exist = false, uninserted = false;
-        State st;
-        
-        //create new object of state to generate fitness
-        st = new State(state);
-        
-        for(int c = 0; c < population.size(); c++)
-        {
-            if(population.get(c).getF() > st.getF())
-            {
-                population.add(c, st);
-                inserted = true;
-                break;
-            }
-            
-            //if it exist in the population
-            if(population.get(c).arintToString().equals(st.arintToString()))
-            {
-                exist = true;
-                uninserted = true;
-            }
-        }
-        
-        if(!inserted && !exist)
-        {
-            population.add(st);
-        }
-        
-        return uninserted;
-    }
-    
+//    private boolean addPopulation(int[] state)
+//    {
+//        boolean inserted = false, exist = false, uninserted = false;
+//        State st;
+//        
+//        //create new object of state to generate fitness
+//        st = new State(state);
+//        
+//        for(int c = 0; c < population.size(); c++)
+//        {
+//            System.out.println(c + " " + population.size());
+//            
+//            if(population.size() > 0)
+//            {
+//                //if it exist in the population
+//                if(population.get(c).arintToString().equals(st.arintToString()))
+//                {
+//                    exist = true;
+//                    uninserted = true;
+//                }
+//
+//                if(population.get(c).getF() > st.getF())
+//                {
+//                    population.add(c, st);
+//                    inserted = true;
+//                    break;
+//                }
+//            }
+//        }
+//        
+//        if(!inserted && !exist)
+//        {
+//            population.add(st);
+//        }
+//        
+//        return uninserted;
+//    }
     
     public int getRow(){
         return this.row;

@@ -56,10 +56,14 @@ public class Dictionary {
         
         int index = Collections.binarySearch(dictionary, word, c);
         
-        System.out.println("Index: " + index);
-        System.out.println("Word: " + this.dictionary.get(index).getActual());
+//        System.out.println("Index: " + index);
+//        System.out.println("Word: " + this.dictionary.get(index).getActual());
         
         return index;
+    }
+
+    public ArrayList<Word> getDictionary() {
+        return dictionary;
     }
     
     private void sortDictionary()

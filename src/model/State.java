@@ -24,7 +24,7 @@ public class State {
         this.state = state;
 //        this.word = word;
         stateToWord();
-        System.out.println(word.getActual());
+//        System.out.println(word.getActual());
         setF(computeF());
     }
     
@@ -76,9 +76,26 @@ public class State {
      */
     private double computeF() {
         double fitness = 0;
+        int found;
+        String longest = "";
         ArrayList<String> comlist;
         Combinations com = new Combinations(word.getSorted());
         comlist = com.getComstring();
+        
+        for(String single : comlist)
+        {
+            found = Main.d.searchWord(new Word(single));
+            
+            if(found >= 0)
+            {
+                if(longest.length() < Main.d.getDictionary().get(found).getActual().length())
+                {
+                    longest = Main.d.getDictionary().get(found).getActual();
+                }
+            }
+        }
+        
+        fitness = longest.length();
         
         return fitness;
     }
