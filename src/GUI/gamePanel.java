@@ -129,8 +129,8 @@ public class gamePanel extends javax.swing.JPanel {
 
         timeLimit.setFont(new java.awt.Font("Proxima Nova Rg", 1, 36)); // NOI18N
         timeLimit.setForeground(new java.awt.Color(70, 118, 139));
-        timeLimit.setText("01:00");
-        add(timeLimit, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 80, -1, -1));
+        timeLimit.setText("60");
+        add(timeLimit, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 80, -1, -1));
 
         timeTitle.setFont(new java.awt.Font("Oswald Regular", 1, 30)); // NOI18N
         timeTitle.setText("TIME");
@@ -139,7 +139,7 @@ public class gamePanel extends javax.swing.JPanel {
         scoreLabel.setFont(new java.awt.Font("Proxima Nova Rg", 1, 36)); // NOI18N
         scoreLabel.setForeground(new java.awt.Color(70, 118, 139));
         scoreLabel.setText("0000");
-        add(scoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, -1, -1));
+        add(scoreLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         scoreTitle.setFont(new java.awt.Font("Oswald Regular", 1, 30)); // NOI18N
         scoreTitle.setText("SCORE");
@@ -209,6 +209,11 @@ public class gamePanel extends javax.swing.JPanel {
         letter5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         letter5.setFocusPainted(false);
         letter5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        letter5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                letter5ActionPerformed(evt);
+            }
+        });
         boardPanel.add(letter5);
 
         letter6.setBackground(new java.awt.Color(252, 241, 209));
@@ -356,7 +361,7 @@ public class gamePanel extends javax.swing.JPanel {
         aiAnswer.setMaximumSize(new java.awt.Dimension(178, 50));
         aiAnswer.setMinimumSize(new java.awt.Dimension(178, 50));
         aiAnswer.setPreferredSize(new java.awt.Dimension(178, 50));
-        add(aiAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 810, -1, -1));
+        add(aiAnswer, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 810, 360, -1));
 
         submitButton.setBackground(new java.awt.Color(70, 118, 139));
         submitButton.setFont(new java.awt.Font("Oswald", 1, 36)); // NOI18N
@@ -436,6 +441,10 @@ public class gamePanel extends javax.swing.JPanel {
         userAnswer.setText("");
         this.revalidate();
     }//GEN-LAST:event_refreshIconMouseClicked
+
+    private void letter5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_letter5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_letter5ActionPerformed
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

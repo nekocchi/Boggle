@@ -40,11 +40,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="8b" green="76" red="46" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="01:00"/>
+        <Property name="text" type="java.lang.String" value="60"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="800" y="80" width="-1" height="-1"/>
+          <AbsoluteConstraints x="840" y="80" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -73,7 +73,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="40" y="80" width="-1" height="-1"/>
+          <AbsoluteConstraints x="60" y="80" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -245,6 +245,9 @@
             <Property name="focusPainted" type="boolean" value="false"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="letter5ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="letter6">
           <Properties>
@@ -579,7 +582,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="180" y="810" width="-1" height="-1"/>
+          <AbsoluteConstraints x="180" y="810" width="360" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

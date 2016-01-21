@@ -51,7 +51,7 @@ public class MenuPanel extends javax.swing.JPanel {
         title.setAlignmentX(0.5F);
         title.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         title.setIconTextGap(5);
-        add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 300, 120));
+        add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, 500, 120));
 
         subTitle.setBackground(new java.awt.Color(255, 255, 255));
         subTitle.setFont(new java.awt.Font("Proxima Nova Rg", 1, 36)); // NOI18N
@@ -110,7 +110,7 @@ public class MenuPanel extends javax.swing.JPanel {
 
     private void startButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startButtonActionPerformed
         try {
-            MyFrame.drawContent(new gamePanel());
+            MyFrame.drawContent(new gamePanel_2());
         } catch (IOException ex) {
             Logger.getLogger(MenuPanel.class.getName()).log(Level.SEVERE, null, ex);
         }

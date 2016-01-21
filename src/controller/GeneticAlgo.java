@@ -20,7 +20,7 @@ public class GeneticAlgo {
         GeneticAlgo.recRate = recRate;
         GeneticAlgo.mutRate = mutRate;
     }
-    
+
     //Object Variables//
     private int maxLength;
     private ArrayList<State> curList;
@@ -162,4 +162,7 @@ public class GeneticAlgo {
         runRandom();
     }
 
+    public ArrayList<State> getCurList() {
+        return curList;
+    }
 }

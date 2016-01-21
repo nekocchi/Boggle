@@ -123,4 +123,8 @@ public class State {
         
         return string;
     }
+
+    public String getFoundWord() {
+        return foundWord;
+    }
 }

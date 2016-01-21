@@ -25,4 +25,12 @@ public class Roogle {
         frame.setVisible(true);
         
     }
+    
+    public static void newGame()
+    {
+        main = new Main();
+        ga = new GeneticAlgo(16);
+        GeneticAlgo.setParameter(100, 10, 2);
+        ga.test2();
+    }
 }
