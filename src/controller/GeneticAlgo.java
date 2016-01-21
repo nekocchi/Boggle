@@ -156,7 +156,7 @@ public class GeneticAlgo {
         
         State x = new State(arr);
         
-        x.print();
+        System.out.println(x.toString());
     }
     public void test2(){
         runRandom();

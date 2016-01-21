@@ -18,10 +18,10 @@ public class State {
     private int[] state;
     private Word word;
     private double f;
-    private String foundWord;
+    private String foundWord = "";
 
     public State(int[] state) {
-        this.state = state;
+        this.state = Arrays.copyOf(state, state.length);
 //        this.word = word;
         stateToWord();
 //        System.out.println(word.getActual());
@@ -45,7 +45,7 @@ public class State {
     }
 
     public int[] getState() {
-        return state;
+        return Arrays.copyOf(state, state.length);
     }
 
     public double getF() {
@@ -92,11 +92,11 @@ public class State {
                 {
                     longest = Main.d.getDictionary().get(found).getActual();
                 }
+                this.foundWord = longest;
             }
         }
         
         fitness = 16 - longest.length();
-        this.foundWord = longest;
         
         return fitness;
     }
@@ -111,16 +111,13 @@ public class State {
     @Override
     public String toString(){
         String selected = "Selected [1] : ";
-        String unselected = "Unselected [0] : ";
         
         for(int i = 0; i<state.length; i++){
             if(state[i] == 1)
                 selected = selected + (i+1) + " ";
-            else
-                unselected = unselected + (i+1) + " ";
         }
         
-        String string = selected + "\n" + unselected;
+        String string = selected + "\n" + word.getActual();
         
         string = "["+getF()+"]"+ "\n" + foundWord + "\n" + string;
         

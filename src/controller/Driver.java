@@ -21,7 +21,7 @@ public class Driver
         Driver.main.test();
         
         Driver.ga = new GeneticAlgo(16);
-        GeneticAlgo.setParameter(100, 10, 1);
+        GeneticAlgo.setParameter(100, 10, 2);
         ga.test2();
         
     }
